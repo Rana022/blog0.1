@@ -17,16 +17,18 @@
     </div>
     <div class="col-md-6 col-lg-6 col-xl-4 d-flex">
     <div class="text w-100 pl-md-3">
-    <span class="subheading">Illustration</span>
+    <span class="subheading"></span>
     <h2><a href="{{route('post.details',$row->slug)}}">{{$row->title}}</a></h2>
+    <div>
     {!! 
     Share::page(URL::current().'/'.'post/'.$row->slug, null, [], '<ul class="media-social list-unstyled">', '<li class="ftco-animate">', '</li>', '</ul>')
     ->facebook()
     ->twitter()
-    ->whatsapp(); !!}
-    <div class="meta">
-    <span class="mb-0">{{$row->created_at->diffForHumans()}}</span>
+    ->whatsapp() !!}
     </div>
+    <div class="meta">
+        <span class="mb-0">{{$row->created_at->diffForHumans()}}</span>
+        </div>
     </div>
     </div>
     </div>

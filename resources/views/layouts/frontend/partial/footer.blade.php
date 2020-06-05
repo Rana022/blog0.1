@@ -6,9 +6,9 @@
 <h2 class="logo"><a href="#">{{$basic->blog_name}}.</a></h2>
 <p>{!!$basic->slogan!!}</p>
 <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-<li class="ftco-animate"><a href="{{$basic->twitter}}"><span class="icon-twitter"></span></a></li>
 <li class="ftco-animate"><a href="{{$basic->bacebook}}"><span class="icon-facebook"></span></a></li>
 <li class="ftco-animate"><a href="{{$basic->linkedin}}"><span class="icon-linkedin"></span></a></li>
+<li class="ftco-animate"><a href="{{$basic->twitter}}"><span><i class="fa fa-user-circle" aria-hidden="true"></i></span></a></li>
 </ul>
 </div>
 </div>
@@ -32,11 +32,11 @@
 </div>
 <div class="col-md">
 <div class="ftco-footer-widget mb-4 ml-md-5">
-<h2 class="ftco-heading-2">Information</h2>
+<h2 class="ftco-heading-2">Categories</h2>
 
 <ul class="list-unstyled">
     @foreach ($categories as $row)
-        <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>{{$row->name}}</a></li>
+        <li><a href="{{route('category.posts', $row->slug)}}" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>{{$row->name}}</a></li>
     @endforeach
 </ul>
 
